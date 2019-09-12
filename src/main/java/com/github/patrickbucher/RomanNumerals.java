@@ -21,11 +21,17 @@ public class RomanNumerals {
         romanToDecimal.put("M", 1000);
 
         decimalToRoman.put(1, "I");
+        decimalToRoman.put(4, "IV");
         decimalToRoman.put(5, "V");
+        decimalToRoman.put(9, "IX");
         decimalToRoman.put(10, "X");
+        decimalToRoman.put(40, "XL");
         decimalToRoman.put(50, "L");
+        decimalToRoman.put(90, "XC");
         decimalToRoman.put(100, "C");
+        decimalToRoman.put(400, "CD");
         decimalToRoman.put(500, "D");
+        decimalToRoman.put(900, "CM");
         decimalToRoman.put(1000, "M");
     }
 

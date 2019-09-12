@@ -19,17 +19,19 @@ public class RomanNumeralsTest {
         romanToDecimal.put("V", 5);
         romanToDecimal.put("VI", 6);
         romanToDecimal.put("VII", 7);
-        romanToDecimal.put("IIX", 8);
+        romanToDecimal.put("VIII", 8);
         romanToDecimal.put("IX", 9);
         romanToDecimal.put("X", 10);
         romanToDecimal.put("XXIII", 23);
+        romanToDecimal.put("XCII", 92);
         romanToDecimal.put("CXXXIX", 139);
-        romanToDecimal.put("CCXXCIX", 289);
-        romanToDecimal.put("DCDLIX", 959);
+        romanToDecimal.put("CCLXXXIX", 289);
+        romanToDecimal.put("CMLIX", 959);
         romanToDecimal.put("MXXIII", 1023);
         romanToDecimal.put("MDXCII", 1592);
-        romanToDecimal.put("MDCDXLIIX", 1948);
+        romanToDecimal.put("MCMXLVIII", 1948);
         romanToDecimal.put("MCMLXXXIV", 1984);
+        romanToDecimal.put("MMXIX", 2019);
     }
 
     @Test
