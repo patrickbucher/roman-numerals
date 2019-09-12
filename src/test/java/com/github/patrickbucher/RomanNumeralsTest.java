@@ -35,12 +35,9 @@ public class RomanNumeralsTest {
     @Test
     public void testRomanToDecimal() {
         for (final String roman : romanToDecimal.keySet()) {
-            final int expected = romanToDecimal.get(roman);
+            final int decimal = romanToDecimal.get(roman);
             final int got = RomanNumerals.toNumber(roman);
-            Assert.assertEquals(
-                String.format("%s to decimal: expected %d, got %d", roman, expected, got),
-                got, expected
-            );
+            Assert.assertEquals(String.format("%s to decimal", roman), decimal, got);
         }
     }
 
@@ -48,5 +45,20 @@ public class RomanNumeralsTest {
     public void testNonRomanCharacters() {
         final String nonRoman = "MDCLXVIk";
         RomanNumerals.toNumber(nonRoman);
+    }
+
+    @Test
+    public void testDecimalToRoman() {
+        for (final String roman : romanToDecimal.keySet()) {
+            final int decimal = romanToDecimal.get(roman);
+            final String got = RomanNumerals.toRoman(decimal);
+            Assert.assertEquals(String.format("%d to roman", decimal), roman, got);
+        }
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testNegativeInput() {
+        final int negativeNumber = -123;
+        RomanNumerals.toRoman(negativeNumber);
     }
 }
