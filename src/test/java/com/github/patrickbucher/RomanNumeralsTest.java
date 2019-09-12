@@ -3,8 +3,8 @@ package ch.paedubucher.romanNumerals;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.Map;
 import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class RomanNumeralsTest {
 
@@ -44,13 +44,9 @@ public class RomanNumeralsTest {
         }
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testNonRomanCharacters() {
         final String nonRoman = "MDCLXVIk";
-        try {
-            RomanNumerals.toNumber(nonRoman);
-            Assert.fail(nonRoman + " must cause an exception");
-        } catch (final IllegalArgumentException ex) {
-        }
+        RomanNumerals.toNumber(nonRoman);
     }
 }
