@@ -99,7 +99,7 @@ public class RomanNumerals {
 
     public static String toRoman(int number) {
         if (number < 0) {
-            throw new IllegalArgumentException("negative numbers are not suppoerted");
+            throw new IllegalArgumentException("negative numbers are not supported");
         }
         String result = "";
         while (number > 0) {
@@ -114,8 +114,8 @@ public class RomanNumerals {
     private static int smallerNumeral(int value) {
         return decimalToRoman.keySet().stream()
             .filter(x -> x <= value)
-            .sorted()
-            .reduce((first, second) -> second)
+            .sorted() // ascending
+            .reduce((first, second) -> second) // last item
             .orElseThrow(() -> new IllegalArgumentException("no numeral <= " + value));
     }
-}
+
